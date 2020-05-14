@@ -278,9 +278,9 @@ $(obj).$(TOOLSET)/%.o: $(srcdir)/%.m FORCE_DO_CMD
 	@$(call do_cmd,objc,1)
 $(obj).$(TOOLSET)/%.o: $(srcdir)/%.mm FORCE_DO_CMD
 	@$(call do_cmd,objcxx,1)
-$(obj).$(TOOLSET)/%.o: $(srcdir)/%.s FORCE_DO_CMD
-	@$(call do_cmd,cc,1)
 $(obj).$(TOOLSET)/%.o: $(srcdir)/%.S FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
+$(obj).$(TOOLSET)/%.o: $(srcdir)/%.s FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
 
 # Try building from generated source, too.
@@ -296,9 +296,9 @@ $(obj).$(TOOLSET)/%.o: $(obj).$(TOOLSET)/%.m FORCE_DO_CMD
 	@$(call do_cmd,objc,1)
 $(obj).$(TOOLSET)/%.o: $(obj).$(TOOLSET)/%.mm FORCE_DO_CMD
 	@$(call do_cmd,objcxx,1)
-$(obj).$(TOOLSET)/%.o: $(obj).$(TOOLSET)/%.s FORCE_DO_CMD
-	@$(call do_cmd,cc,1)
 $(obj).$(TOOLSET)/%.o: $(obj).$(TOOLSET)/%.S FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
+$(obj).$(TOOLSET)/%.o: $(obj).$(TOOLSET)/%.s FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
 
 $(obj).$(TOOLSET)/%.o: $(obj)/%.c FORCE_DO_CMD
@@ -313,9 +313,9 @@ $(obj).$(TOOLSET)/%.o: $(obj)/%.m FORCE_DO_CMD
 	@$(call do_cmd,objc,1)
 $(obj).$(TOOLSET)/%.o: $(obj)/%.mm FORCE_DO_CMD
 	@$(call do_cmd,objcxx,1)
-$(obj).$(TOOLSET)/%.o: $(obj)/%.s FORCE_DO_CMD
-	@$(call do_cmd,cc,1)
 $(obj).$(TOOLSET)/%.o: $(obj)/%.S FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
+$(obj).$(TOOLSET)/%.o: $(obj)/%.s FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
 
 
@@ -326,8 +326,8 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /Users/syed/.npm/_npx/24343/lib/node_modules/electron-rebuild/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/syed/.electron-gyp/4.2.4" "-Dnode_gyp_dir=/Users/syed/.npm/_npx/24343/lib/node_modules/electron-rebuild/node_modules/node-gyp" "-Dnode_lib_file=/Users/syed/.electron-gyp/4.2.4/<(target_arch)/node.lib" "-Dmodule_root_dir=/Users/syed/Documents/MyExperiments/electron-key-window" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/Users/syed/Documents/MyExperiments/electron-key-window/build/config.gypi -I/Users/syed/.npm/_npx/24343/lib/node_modules/electron-rebuild/node_modules/node-gyp/addon.gypi -I/Users/syed/.electron-gyp/4.2.4/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/build/config.gypi $(srcdir)/../../../.electron-gyp/4.2.4/include/node/common.gypi $(srcdir)/binding.gyp $(srcdir)/../../../.npm/_npx/24343/lib/node_modules/electron-rebuild/node_modules/node-gyp/addon.gypi
+cmd_regen_makefile = cd $(srcdir); /Users/syed/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "--toplevel-dir=." -I/Users/syed/Documents/MyExperiments/electron-window-nspanel/build/config.gypi -I/Users/syed/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/addon.gypi -I/Users/syed/Library/Caches/node-gyp/12.16.1/include/node/common.gypi "--depth=." "-Goutput_dir=." "--generator-output=build" "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/syed/Library/Caches/node-gyp/12.16.1" "-Dnode_gyp_dir=/Users/syed/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp" "-Dnode_lib_file=/Users/syed/Library/Caches/node-gyp/12.16.1/<(target_arch)/node.lib" "-Dmodule_root_dir=/Users/syed/Documents/MyExperiments/electron-window-nspanel" "-Dnode_engine=v8" binding.gyp
+Makefile: $(srcdir)/../../../Library/Caches/node-gyp/12.16.1/include/node/common.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp $(srcdir)/../../../.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/addon.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
