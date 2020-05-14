@@ -71,7 +71,7 @@ NAN_METHOD(MakeNormalPanel) {
   // Ensure that the window is a "non activating panel" which means it won't activate the application
   // when it becomes key.
   window.styleMask |= NSWindowStyleMaskNonactivatingPanel;
-  window.styleMask |= NSWindowStyleMaskFullSizeContentView;
+  window.styleMask |= NSWindowStyleMaskBorderless;
 
   // Ensure that the window can display over the top of fullscreen apps
   [window setCollectionBehavior: NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorMoveToActiveSpace | NSWindowCollectionBehaviorFullScreenAuxiliary ];

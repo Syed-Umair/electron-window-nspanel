@@ -1,7 +1,7 @@
 {
   "name": "@syed_umair/electron-window-nspanel",
   "description": "create NSPanels like electron windows",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Syed Umair <ideasyed@outlook.com>",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "darwin"
   ],
   "devDependencies": {
-    "electron": "4.2.4",
+    "electron": "4.2.12",
     "mocha": "^5.2.0",
     "node-gyp": "^3.8.0",
     "spectron": "^6.0.0"

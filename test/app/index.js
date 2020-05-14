@@ -1,5 +1,5 @@
 var app = require('electron').app;
-var PanelWindow = require('../../').PanelWindow;
+var PanelWindow = require('../../').FullScreenPanelWindow;
 var path = require('path')
 
 var mainWindow = null;
@@ -11,6 +11,7 @@ app.on('ready', function () {
     height: 900,
     minHeight: 100,
     minWidth: 100,
+    transparent: true,
     show: false
   });
   mainWindow.loadURL('file://' + __dirname + '/index.html')
