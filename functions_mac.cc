@@ -75,7 +75,8 @@ NAN_METHOD(MakeNormalPanel) {
 
   // Ensure that the window can display over the top of fullscreen apps
   [window setCollectionBehavior: NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorMoveToActiveSpace | NSWindowCollectionBehaviorFullScreenAuxiliary ];
-  [window setLevel:NSScreenSaverWindowLevel];
+  [window setLevel:NSFloatingWindowLevel];
+  [window setFloatingPanel:YES];
   [window setBackgroundColor:NSColor.clearColor];
   [window setAlphaValue:1];
 
