@@ -70,15 +70,15 @@ NAN_METHOD(MakeNormalPanel) {
 
   // Ensure that the window is a "non activating panel" which means it won't activate the application
   // when it becomes key.
-  window.styleMask |= NSWindowStyleMaskNonactivatingPanel;
-  window.styleMask |= NSWindowStyleMaskBorderless;
+  window.styleMask = NSResizableWindowMask
+                  | NSTitledWindowMask
+                  | NSFullSizeContentViewWindowMask
+                  | NSWindowStyleMaskNonactivatingPanel;
 
   // Ensure that the window can display over the top of fullscreen apps
   [window setCollectionBehavior: NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorMoveToActiveSpace | NSWindowCollectionBehaviorFullScreenAuxiliary ];
-  [window setLevel:NSFloatingWindowLevel];
-  [window setFloatingPanel:YES];
-  [window setBackgroundColor:NSColor.clearColor];
-  [window setAlphaValue:1];
+  window.titlebarAppearsTransparent = true;
+  window.titleVisibility = NSWindowTitleHidden;
 
   // Hide the traffic light controls
   [[window standardWindowButton:NSWindowCloseButton] setHidden:YES];
