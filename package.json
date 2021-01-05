@@ -1,13 +1,13 @@
 {
   "name": "@syed_umair/electron-window-nspanel",
   "description": "create NSPanels like electron windows",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Syed Umair <ideasyed@outlook.com>",
   "main": "index.js",
   "scripts": {
     "configure": "node-gyp configure",
-    "prepare": "node-gyp build",
     "build": "node-gyp build",
+    "prepare": "npm run build",
     "test": "mocha"
   },
   "os": [

@@ -20,13 +20,11 @@ describe('PanelWindow', function () {
     }
   })
 
-  it ('shows a PanelWindow without crashing', function () {
+  it ('shows NSPanel Windows without crashing', function () {
     return this.app.client.waitUntilWindowLoaded()
     .then(this.app.client.getWindowCount)
-    .then(count => { assert.equal(count, 1) })
+    .then(count => { assert.equal(count, 2) })
     .then(this.app.browserWindow.isVisible)
     .then(visible => { assert.equal(visible, true) })
-    .then(this.app.browserWindow.isFocused)
-    .then(focused => { assert.equal(focused, true) })
   });
 })

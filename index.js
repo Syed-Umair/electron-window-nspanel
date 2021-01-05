@@ -3,6 +3,11 @@ var NativeExtension = require('bindings')('NativeExtension');
 
 class FullScreenPanelWindow extends BrowserWindow {
   constructor(options) {
+    options = {
+      ...options,
+      titleBarStyle: 'customButtonsOnHover',
+      closable: false,
+    }
     super(options);
     NativeExtension.MakeFullScreenPanel(this.getNativeWindowHandle());
   }
@@ -15,6 +20,11 @@ class FullScreenPanelWindow extends BrowserWindow {
 
 class PanelWindow extends BrowserWindow {
   constructor(options) {
+    options = {
+      ...options,
+      titleBarStyle: 'customButtonsOnHover',
+      closable: false,
+    }
     super(options);
     NativeExtension.MakeNormalPanel(this.getNativeWindowHandle());
   }
