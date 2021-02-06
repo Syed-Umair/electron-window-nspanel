@@ -1,7 +1,7 @@
 {
   "name": "@syed_umair/electron-window-nspanel",
   "description": "create NSPanels like electron windows",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Syed Umair <ideasyed@outlook.com>",
   "main": "index.js",
   "scripts": {

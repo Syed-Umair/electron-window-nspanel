@@ -6,7 +6,9 @@ class FullScreenPanelWindow extends BrowserWindow {
     options = {
       ...options,
       titleBarStyle: 'customButtonsOnHover',
+      transparent: true,
       closable: false,
+      show:false
     }
     super(options);
     NativeExtension.MakeFullScreenPanel(this.getNativeWindowHandle());
@@ -23,7 +25,9 @@ class PanelWindow extends BrowserWindow {
     options = {
       ...options,
       titleBarStyle: 'customButtonsOnHover',
+      transparent: true,
       closable: false,
+      show:false
     }
     super(options);
     NativeExtension.MakeNormalPanel(this.getNativeWindowHandle());

@@ -6,19 +6,20 @@ const path = require('path')
 describe('PanelWindow', function () {
   this.timeout(10000)
 
-  beforeEach(function () {
+  before(function () {
     this.app = new Application({
       path: electronPath,
       args: [path.join(__dirname, 'app')]
     })
     return this.app.start()
-  })
+  });
 
-  afterEach(function () {
+  after(async function () {
     if (this.app && this.app.isRunning()) {
-      return this.app.stop()
+      await this.app.electron.remote.app.exit(0);
+      process.exit(0);
     }
-  })
+  });
 
   it ('shows NSPanel Windows without crashing', function () {
     return this.app.client.waitUntilWindowLoaded()
