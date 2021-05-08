@@ -10,7 +10,7 @@
                 "conditions": [
                     ['OS=="mac"', {
                         "sources": [
-                            "functions_mac.cc"
+                            "functions_mac.mm"
                         ],
                         "libraries": [
                             'Foundation.framework',

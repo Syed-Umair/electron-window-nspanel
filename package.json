@@ -1,27 +1,28 @@
 {
   "name": "@syed_umair/electron-window-nspanel",
   "description": "create NSPanels like electron windows",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Syed Umair <ideasyed@outlook.com>",
   "main": "index.js",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
     "prepare": "npm run build",
-    "test": "mocha"
+    "test": "mocha",
+    "run:test-app": "electron ./test/app/index.js"
   },
   "os": [
     "darwin"
   ],
   "devDependencies": {
-    "electron": "4.2.12",
-    "mocha": "^5.2.0",
-    "node-gyp": "^3.8.0",
-    "spectron": "^6.0.0"
+    "electron": "11.4.6",
+    "mocha": "8.4.0",
+    "node-gyp": "8.0.0",
+    "spectron": "13.0.0"
   },
   "dependencies": {
-    "bindings": "^1.3.1",
-    "nan": "^2.11.1"
+    "bindings": "1.5.0",
+    "nan": "2.14.2"
   },
   "repository": {
     "type": "git",
